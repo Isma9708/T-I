@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=/templates/index.html">
+    <!-- Redirección inmediata a templates/index.html (ruta relativa) -->
+    <meta http-equiv="refresh" content="0;url=templates/index.html">
     <title>Dispute Analysis Tool</title>
     <style>
         body {
@@ -64,14 +65,15 @@
         <p>Welcome to the Dispute Analysis Tool. You will be redirected to the application automatically.</p>
         <div class="spinner"></div>
         <p>If you are not redirected automatically, please click the button below:</p>
-        <a href="/templates/index.html" class="btn">Go to Application</a>
+        <!-- Botón con ruta relativa -->
+        <a href="templates/index.html" class="btn">Go to Application</a>
     </div>
 
     <script>
-        // Redirect to the application's main page
+        // Redirección a la página principal usando ruta relativa
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
-                window.location.href = '/';
+                window.location.href = 'templates/index.html';
             }, 1500);
         });
     </script>
